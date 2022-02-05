@@ -93,7 +93,7 @@ panel, along with the probability of being classified as *Positive* or *Negative
 - Instructions for the use of the App can be found in the [documentation].
 
 - The script to generate the Training and Testing Data sets, the model and it's
-corresponding confusion matrix can be found on the [GitHub Repository](https://github.com/JoelChG/DiabetesShinyApp)
+corresponding confusion matrix can be found on the [GitHub Repository](https://github.com/JoelChG/DevelopingDataProducts)
 
 
 The implementation of Machine Learning models tools as Decision Support Systems
