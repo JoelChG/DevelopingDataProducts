@@ -113,7 +113,7 @@ shinyUI(fluidPage(
                    and specificity on the predictions for the testing data set, 
                    it is important to note that the model is most likely  overfitted, 
                    and that the predictions for Out of Sample observations may
-                   most likely not be accurate at all.")
+                   most likely not be accurate at all."),
             tags$h3("Disclaimer"), 
             tags$p("This is for demonstration purposes only, this is not a 
                    diagnostic tool and cannot be used to confirm or exclude 
