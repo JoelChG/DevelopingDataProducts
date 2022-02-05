@@ -1,6 +1,6 @@
 # Early type 2 Diabetes Prediction tool
 
-This is the final project for the course [Developing Data Products](https://www.coursera.org/learn/data-products/home/welcome)
+This is the final project for the course [Developing Data Products](https://www.coursera.org/learn/data-products/home/)
 offered by Johns Hopkins University, available on Coursera.
 
 ## Project Overview
@@ -29,17 +29,17 @@ clinical data:
 15. Presence of alopecia
 16. Obesity
 
-## Files
+## Assets
 The script files for the creation of the model, training and testing data sets and Shiny Web App can be found
-[here]()
+[here](https://github.com/JoelChG/DevelopingDataProducts/tree/main/Assets)
 
 ## Shiny App
-The Shiny App can be found [here]()
+The Shiny App can be found [here](https://chavezgjoel.shinyapps.io/EarlyDiabetesPrediction/)
 
 ## Presentation
 The App pitch presentation can be found [here]()
 
 ## Disclaimer
-This is not a diagnostic tool, the purpose of this App is for educational purposes only.
+This is not a diagnostic tool, the purpose of this App is for demonstrational purposes only.
 
 
