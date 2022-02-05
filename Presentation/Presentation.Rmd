@@ -116,5 +116,3 @@ as.matrix(confusionMat$byClass, dimnames = TRUE)[c(1:4, 8), ]
 
 1. Islam, MM Faniqul, et al. 'Likelihood prediction of diabetes at early stage using data mining techniques.' Computer Vision and Machine Intelligence in Medical Image Analysis. Springer, Singapore, 2020. 113-125.  
 2. Diabetes, [World Health Organization](https://www.who.int/health-topics/diabetes#tab=tab_1)
-
-`
