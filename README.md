@@ -25,7 +25,7 @@ clinical data:
 11. Presence of inexplicable irritability
 12. Delayed healing of wounds
 13. Partial paresis of a limb
-14. Prsence of muscle stiffnes
+14. Presence of muscle stiffnes
 15. Presence of alopecia
 16. Obesity
 
@@ -37,7 +37,7 @@ The script files for the creation of the model, training and testing data sets a
 The Shiny App can be found [here](https://chavezgjoel.shinyapps.io/EarlyDiabetesPrediction/)
 
 ## Presentation
-The App pitch presentation can be found [here]()
+The App pitch presentation can be found [here](https://rpubs.com/JoelChG/DiabetesPrediction)
 
 ## Disclaimer
 This is not a diagnostic tool, the purpose of this App is for demonstrational purposes only.
