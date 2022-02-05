@@ -2,14 +2,14 @@
 library(randomForest)
 library(caret)
 
-workingDirectory <- "C:/Users/chave/Desktop/DDP-FinalProject/"
+workingDirectory <- "C:/Users/chave/Desktop/DDP-FinalProject/DevelopingDataProducts"
 assetsDirectory <- paste(workingDirectory, "Assets", sep = "/")
 outputDir <- paste(assetsDirectory, "OutputFiles", sep = "/")
 setwd(workingDirectory)
 
 # Importing the data set
-data <- read.csv(paste(workingDirectory, 
-                       "Assets/Dataset/diabetes_data.csv", 
+data <- read.csv(paste(assetsDirectory, 
+                       "Dataset/diabetes_data.csv", 
                        sep = "/"), 
                  header = TRUE)
 

@@ -8,14 +8,16 @@ n_y <- c("No", "Yes")
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
-    
     # Page header
-    headerPanel('Early Type 2 Diabetes Prediction Tool'),
+    titlePanel(
+        tags$h1(
+        tags$strong('Early Type 2 Diabetes Prediction Tool') 
+        ), windowTitle = "Early Type 2 Diabetes Prediction Tool"),
     
     # Input values
     sidebarPanel(id = "my_panel",
         #tags$label
-        (h2('Input parameters')),
+        (h2(tags$strong('Input parameters'))),
         numericInput("Age", 
                      label = "What's your age? (in years)", 
                      value = 20, min = 20, max = 90),
@@ -69,9 +71,10 @@ shinyUI(fluidPage(
     ),
     
     mainPanel(
-        tags$label(h2('Status/Output')), # Status/Output Text Box
+        tags$label(h2(tags$strong('Status/Output'))), # Status/Output Text Box
         verbatimTextOutput('contents'),
         tableOutput('tabledata'), # Prediction results table
+        tags$br(), 
         tags$div(
             tags$h2("Documentation"),
             tags$p("This Shiny Web App was developed as part of the final project
@@ -106,13 +109,18 @@ shinyUI(fluidPage(
             tags$p("And the results of the model test statistics are displayed
                    below:"), 
             tableOutput('confusionMatrix2'), 
-            tags$h2("Disclaimer"), 
+            tags$h3("Disclaimer"), 
             tags$p("This is for demonstration purposes only, this is not a 
-                   diagnostic tool and cannot be used to diagnose or exclude a 
-                   diagnosis."), 
-            tags$h2("See more"), 
+                   diagnostic tool and cannot be used to confirm or exclude 
+                   a diagnosis."), 
+            tags$h3("See more"), 
             tags$p("To see more about the developmet of this app, click the
-                   links below")
+                   links below"),
+            tags$a(href="https://github.com/JoelChG/DevelopingDataProducts",
+                   "Project GitHub Repository"), 
+            tags$br(),
+            tags$a(href="https://www.kaggle.com/ishandutta/early-stage-diabetes-risk-prediction-dataset",
+                   "Early Stage Diabetes Risk Prediction Dataset")
         )
     )
 ))

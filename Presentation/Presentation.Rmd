@@ -1,0 +1,120 @@
+---
+title: "Early Diabetes Prediction Tool"
+author: "Joel Chavez Gomez"
+date: "4/2/2022"
+output: 
+        ioslides_presentation:
+                widescreen: true
+---
+
+<link href='http://fonts.googleapis.com/css?family=Baumans' rel='stylesheet' type='text/css'>
+<style type="text/css">
+.title-slide hgroup > h1{
+  font-family: 'Sans-Serif', cursive;
+}
+
+<style type="text/css">
+
+
+.title-slide hgroup > h2{
+  font-family: 'Lato', 'Calibri', sans-serif;
+}
+
+.title-slide {
+  background-color: #e5e5e5; /* Background color for title slide*/
+  /* background-image:url(http://goo.gl/EpXln); */
+}
+
+
+.title-slide hgroup > h1, 
+.title-slide hgroup > h2 {
+  font-family: 'Lato', 'Calibri', sans-serif; /* font for title */
+  color: #457b9d /* color for title in title slide */
+}
+
+/* Fonts and Spacing */
+article p, article li, article li.build, section p, section li{
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  text-align: justify;
+  font-size:22px;
+  line-height: 1em;
+  color: #3e5c76;
+}
+
+slide:not(.segue) h2{
+  font-family: 'Calibri', Arial, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: normal;
+  letter-spacing: -1px;
+  line-height: 1.2em;
+/*  color: #193441;*/
+/*  color: #02574D;*/
+  color: #ee6c4d; /* color for slides header title */
+}
+
+/* Reduce Space between Title and Body */
+slides > slide > hgroup + article {
+  margin-top: 10px;
+}
+
+slides > slide {
+    background: #ffffff;
+}
+
+</style>
+
+```{r setup, include = FALSE, warning=FALSE, message=FALSE}
+library(caret)
+library(tidyverse)
+library(data.table)
+source("C:/Users/chave/Desktop/DDP-FinalProject/DevelopingDataProducts/Assets/Script/model_script.R")
+```
+## Introduction 
+- Diabetes is a chronic, metabolic disease characterized by elevated levels of
+blood glucose, which leads over time to serious damage to the heart, blood vessels, eyes, kidneys and nerves.  
+
+- The most common is type 2 diabetes, usually in adults, which occurs when the body becomes resistant to insulin or doesn't make enough insulin. 
+
+- About 422 million people worldwide have diabetes, the majority living in low-and middle-income countries, and 1.5 million deaths are directly attributed to diabetes each year.
+
+- Both the number of cases and the prevalence of diabetes have been steadily increasing over the past few decades. 
+
+- Better tools for screening are needed in order to detect early-onset diabetes
+and reduce morbidity and mortality.
+
+## Our Predictor Tool
+- A *Random Forest* model was created with the [Early Stage Diabetes Risk Prediction Dataset](https://www.kaggle.com/ishandutta/early-stage-diabetes-risk-prediction-dataset?select=diabetes_data_upload.csv) from *kaggle*.
+
+- The [Web App](https://chavezgjoel.shinyapps.io/EarlyDiabetesPrediction/?_ga=2.262725252.901862142.1643921629-813351577.1643921629) has a sidebar panel, in which the user inputs the corresponding patient data. The model takes this input and displays a prediction in the main
+panel, along with the probability of being classified as *Positive* or *Negative*.
+
+- Instructions for the use of the App can be found in the [documentation].
+
+- The script to generate the Training and Testing Data sets, the model and it's
+corresponding confusion matrix can be found on the [GitHub Repository](https://github.com/JoelChG/DiabetesShinyApp)
+
+
+The implementation of Machine Learning models tools as Decision Support Systems
+for health care providers could help with the screening and early identification
+of patients at risk of diabetes or at early stages, before complications occur.
+
+DISCLAIMER: it is important to note that this is not a diagnostic tool, and should not be used to establish or exclude a diagnosis.
+
+## Confusion Matrix
+These are the result of the confusion matrix for our model predictions on the testing set.
+
+```{r echo = TRUE}
+confusionMat$table
+as.matrix(confusionMat$byClass, dimnames = TRUE)[c(1:4, 8), ]
+```
+
+## References
+<br>
+<br>
+
+1. Islam, MM Faniqul, et al. 'Likelihood prediction of diabetes at early stage using data mining techniques.' Computer Vision and Machine Intelligence in Medical Image Analysis. Springer, Singapore, 2020. 113-125.  
+2. Diabetes, [World Health Organization](https://www.who.int/health-topics/diabetes#tab=tab_1)
+
+`
